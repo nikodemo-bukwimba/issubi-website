@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="sw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Issubi — Apps zinazojengwa Mbeya, kwa Tanzania</title>
+    <meta
+      name="description"
+      content="Issubi ni nyumba ya apps zinazojengwa Mbeya, Tanzania. Pakua Pharmacy App na nyingine zinazokuja."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --paper: #f7f4ec;
+        --ink: #1c2b22;
+        --green: #2f6c51;
+        --green-dark: #204b38;
+        --ochre: #c76a3b;
+        --line: #dcd5c3;
+        --paper-raised: #ffffff;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Fraunces", serif;
+        font-weight: 600;
+        margin: 0;
+      }
+      .wrap {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      a {
+        color: inherit;
+      }
+
+      /* NAV */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 28px 24px;
+        max-width: 880px;
+        margin: 0 auto;
+      }
+      .logo {
+        font-family: "Fraunces", serif;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+      .logo span {
+        color: var(--green);
+      }
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .lang-btn {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 12px;
+        background: none;
+        border: 1px solid var(--line);
+        color: #6b6354;
+        padding: 7px 12px;
+        border-radius: 999px;
+        cursor: pointer;
+      }
+      .lang-btn:hover {
+        border-color: var(--green);
+        color: var(--green-dark);
+      }
+      nav a.cta-small {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 13px;
+        border: 1px solid var(--ink);
+        padding: 8px 16px;
+        border-radius: 999px;
+        text-decoration: none;
+      }
+
+      /* HERO */
+      .hero {
+        padding: 48px 0 64px;
+        border-bottom: 1px solid var(--line);
+      }
+      .eyebrow {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--green);
+        margin-bottom: 18px;
+      }
+      .hero h1 {
+        font-size: 42px;
+        line-height: 1.15;
+        max-width: 11ch;
+      }
+      .hero p.lead {
+        font-size: 18px;
+        color: #3d4a40;
+        max-width: 38ch;
+        margin-top: 18px;
+      }
+      @media (min-width: 640px) {
+        .hero h1 {
+          font-size: 54px;
+        }
+      }
+
+      /* APP SHELF */
+      .shelf {
+        padding: 56px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .shelf h2 {
+        font-size: 14px;
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #6b6354;
+        margin-bottom: 28px;
+      }
+
+      .app-card {
+        background: var(--paper-raised);
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        padding: 32px;
+        position: relative;
+        overflow: hidden;
+      }
+      .app-tab {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: var(--green);
+        color: #eaf3de;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 12px;
+        padding: 6px 14px;
+        border-bottom-left-radius: 4px;
+      }
+      .app-card h3 {
+        font-size: 26px;
+        margin-bottom: 8px;
+      }
+      .app-card .tagline {
+        color: #5a6b5e;
+        font-size: 15px;
+        margin-bottom: 20px;
+      }
+      .app-meta {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 12px;
+        color: #6b6354;
+        margin-bottom: 24px;
+      }
+      .app-meta span {
+        border: 1px solid var(--line);
+        padding: 4px 10px;
+        border-radius: 999px;
+      }
+
+      .download-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--green);
+        color: #fff;
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        padding: 14px 26px;
+        border-radius: 4px;
+        text-decoration: none;
+        border: none;
+      }
+      .download-btn:hover {
+        background: var(--green-dark);
+      }
+      .download-sub {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 12px;
+        color: #8a8270;
+        margin-top: 10px;
+      }
+
+      .download-btn.is-soon {
+        background: transparent;
+        color: #8a8270;
+        border: 1px dashed #c7bfa9;
+        cursor: default;
+      }
+      .soon-note {
+        font-size: 13px;
+        color: #6b6354;
+        margin-top: 4px;
+        margin-bottom: 18px;
+      }
+
+      .whatsapp-line {
+        margin-top: 18px;
+        font-size: 14px;
+        color: #3d4a40;
+      }
+      .whatsapp-line a {
+        color: var(--ochre);
+        font-weight: 600;
+        text-decoration: none;
+        border-bottom: 1px solid var(--ochre);
+      }
+
+      /* PLATFORM DOWNLOADS */
+      .platform-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 16px;
+        margin-bottom: 6px;
+      }
+      .platform-block {
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        padding: 18px;
+        background: var(--paper);
+      }
+      .platform-name {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: #6b6354;
+        margin-bottom: 12px;
+      }
+      .platform-block .download-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 18px;
+        font-size: 14px;
+      }
+      .platform-block .download-sub {
+        margin-top: 8px;
+        text-align: center;
+      }
+
+      /* PLATFORM INSTALL TABS */
+      .platform-tabs {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      @media (min-width: 720px) {
+        .platform-tabs {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 28px;
+        }
+      }
+      .platform-col-title {
+        font-family: "Fraunces", serif;
+        font-size: 17px;
+        font-weight: 600;
+        margin-bottom: 4px;
+        color: var(--green-dark);
+      }
+      .platform-col .step {
+        padding: 14px 0;
+      }
+
+      /* INSTALL STEPS — prescription style */
+      .install {
+        padding: 56px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .install h2 {
+        font-size: 14px;
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #6b6354;
+        margin-bottom: 8px;
+      }
+      .install .install-title {
+        font-family: "Fraunces", serif;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 28px;
+      }
+      .step {
+        display: flex;
+        gap: 18px;
+        padding: 18px 0;
+        border-top: 1px solid var(--line);
+      }
+      .step:first-of-type {
+        border-top: none;
+      }
+      .step-num {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 13px;
+        color: var(--ochre);
+        min-width: 28px;
+        padding-top: 2px;
+      }
+      .step-text strong {
+        display: block;
+        font-size: 15px;
+        margin-bottom: 2px;
+      }
+      .step-text span {
+        font-size: 14px;
+        color: #5a6b5e;
+      }
+
+      /* COMING SOON */
+      .soon {
+        padding: 56px 0;
+      }
+      .soon h2 {
+        font-size: 14px;
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #6b6354;
+        margin-bottom: 20px;
+      }
+      .soon-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 14px;
+      }
+      .soon-card {
+        border: 1px dashed var(--line);
+        border-radius: 4px;
+        padding: 18px;
+        color: #8a8270;
+      }
+      .soon-card strong {
+        display: block;
+        color: #5a6b5e;
+        font-family: "Fraunces", serif;
+        font-size: 16px;
+        font-weight: 500;
+      }
+      .soon-card span {
+        font-size: 13px;
+      }
+
+      footer {
+        padding: 40px 0 56px;
+      }
+      .foot-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      footer p {
+        font-size: 13px;
+        color: #8a8270;
+        margin: 0;
+      }
+      footer .logo {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo"><span>Issubi</span></div>
+      <div class="nav-right">
+        <button id="langToggle" class="lang-btn" aria-label="Switch language">EN</button>
+        <a class="cta-small i18n" href="#apps" data-en="View App">Tazama App</a>
+      </div>
+    </nav>
+
+    <div class="wrap">
+      <section class="hero">
+        <div class="eyebrow">Mbeya, Tanzania</div>
+        <h1 class="i18n" data-en="Apps built for the reality of African businesses.">Apps zinazojengwa kwa uhalisia wa biashara za Kiafrika.</h1>
+        <p class="lead i18n" data-en="Issubi is where you find apps built from scratch — working without internet, for people who need them to work first, before they need them to look fancy.">
+          Issubi ni mahali pa kupata apps zinazojengwa kuanzia chini(From
+          scratch) — zikifanya kazi bila mtandao, kwa watu wanaohitaji zifanye
+          kazi kwanza, kabla ya kuwa za kifahari.
+        </p>
+      </section>
+
+      <section class="shelf" id="apps">
+        <h2 class="i18n" data-en="First App">App ya kwanza</h2>
+        <div class="app-card">
+          <div class="app-tab">APP 01</div>
+          <h3>Pharmacy Manager</h3>
+          <p class="tagline i18n" data-en="A system for managing pharmacies — sales, stock, and records — that works without internet.">
+            Mfumo wa kusimamia maduka ya dawa(Pharmacies) — mauzo, stock, na
+            rekodi — unaofanya kazi bila mtandao.
+          </p>
+          <div class="app-meta">
+            <span>Offline-first</span>
+            <span>Android</span>
+            <span>v1.0</span>
+          </div>
+          <div class="app-meta">
+            <span>Offline-first</span>
+            <span>Android · Windows · macOS</span>
+            <span>v1.0</span>
+          </div>
+
+          <div class="platform-grid">
+            <div class="platform-block">
+              <div class="platform-name">Android</div>
+              <span class="download-btn is-soon i18n" data-en="Coming in August" aria-disabled="true">
+                Inakuja Agosti
+              </span>
+              <div class="download-sub i18n" data-en=".apk — approx. 25MB · Android 8.0+">.apk — karibu MB 25 · Android 8.0+</div>
+            </div>
+
+            <div class="platform-block">
+              <div class="platform-name">Windows</div>
+              <span class="download-btn is-soon i18n" data-en="Coming in August" aria-disabled="true">
+                Inakuja Agosti
+              </span>
+              <div class="download-sub i18n" data-en=".zip — approx. 60MB · Windows 10/11">.zip — karibu MB 60 · Windows 10/11</div>
+            </div>
+
+            <div class="platform-block">
+              <div class="platform-name">macOS</div>
+              <span class="download-btn is-soon i18n" data-en="Coming in August" aria-disabled="true">
+                Inakuja Agosti
+              </span>
+              <div class="download-sub i18n" data-en=".dmg — approx. 65MB · macOS 12+">.dmg — karibu MB 65 · macOS 12+</div>
+            </div>
+          </div>
+
+          <p class="soon-note i18n" data-en="Pharmacy Manager v1.0 launches officially in August 2026. Join the WhatsApp list so we can send you the download link on launch day.">Pharmacy Manager v1.0 inazinduliwa rasmi Agosti 2026. Jiunge na orodha ya WhatsApp ili tukutumie link ya kupakua siku ya uzinduzi.</p>
+
+          <p class="whatsapp-line i18n" data-en='Join the launch list — <a href="https://wa.me/255755977960" target="_blank" rel="noopener">Message us on WhatsApp</a>, and we will send you the link on launch day.'>
+            Jiunge na orodha ya uzinduzi —
+            <a href="https://wa.me/255755977960" target="_blank" rel="noopener"
+              >Tutumie WhatsApp</a
+            >, tutakutumia link siku ya uzinduzi.
+          </p>
+        </div>
+      </section>
+
+      <section class="install">
+        <h2 class="i18n" data-en="Instructions">Maelekezo</h2>
+        <div class="install-title i18n" data-en="How to install the app after downloading">Jinsi ya kufunga app baada ya kupakua</div>
+
+        <div class="platform-tabs">
+          <div class="platform-col">
+            <div class="platform-col-title">Android</div>
+            <div class="step">
+              <div class="step-num">01</div>
+              <div class="step-text i18n" data-en='<strong>Tap the APK file you downloaded</strong><span>It appears in your phone&#39;s "Downloads".</span>'>
+                <strong>Bofya faili la APK ulilolipakua</strong>
+                <span>Linaonekana kwenye "Downloads" ya simu yako.</span>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">02</div>
+              <div class="step-text i18n" data-en='<strong>"Unknown source" warning</strong><span>Tap "Settings" on that message, then switch "Allow from this source" to On.</span>'>
+                <strong>Onyo la "Unknown source"</strong>
+                <span>Bofya "Settings" kwenye ujumbe huo, geuza "Allow from this source" kuwa On.</span>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">03</div>
+              <div class="step-text i18n" data-en='<strong>Tap "Install" again</strong><span>The app will install within a few seconds.</span>'>
+                <strong>Bofya "Install" tena</strong>
+                <span>App itafungwa ndani ya sekunde chache.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="platform-col">
+            <div class="platform-col-title">Windows</div>
+            <div class="step">
+              <div class="step-num">01</div>
+              <div class="step-text i18n" data-en='<strong>Open the .zip file you downloaded</strong><span>Click "Extract All" to get the app folder.</span>'>
+                <strong>Fungua faili la .zip ulilolipakua</strong>
+                <span>Bofya "Extract All" kupata folder ya app.</span>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">02</div>
+              <div class="step-text i18n" data-en='<strong>"Windows protected your PC" warning</strong><span>Click "More info", then "Run anyway" — this is normal for apps without a Microsoft Store license.</span>'>
+                <strong>Onyo la "Windows protected your PC"</strong>
+                <span>Bofya "More info", kisha "Run anyway" — hii ni kawaida kwa apps bila Microsoft Store license.</span>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">03</div>
+              <div class="step-text i18n" data-en='<strong>Open the .exe file inside the folder</strong><span>The app opens directly — no extra "install" needed.</span>'>
+                <strong>Fungua faili la .exe ndani ya folder</strong>
+                <span>App itafunguka moja kwa moja, hauhitaji "install" ya ziada.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="platform-col">
+            <div class="platform-col-title">macOS</div>
+            <div class="step">
+              <div class="step-num">01</div>
+              <div class="step-text i18n" data-en='<strong>Open the .dmg file you downloaded</strong><span>A new window opens with the app icon.</span>'>
+                <strong>Fungua faili la .dmg ulilolipakua</strong>
+                <span>Dirisha jipya litafunguka likiwa na icon ya app.</span>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">02</div>
+              <div class="step-text i18n" data-en='<strong>Drag the icon into "Applications"</strong><span>Then close that window.</span>'>
+                <strong>Vuta icon kwenda "Applications"</strong>
+                <span>Kisha funga dirisha hilo.</span>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-num">03</div>
+              <div class="step-text i18n" data-en='<strong>"Apple cannot verify" warning</strong><span>Open "System Settings → Privacy &amp; Security", click "Open Anyway" next to the app&#39;s name.</span>'>
+                <strong>Onyo la "Apple cannot verify"</strong>
+                <span>Fungua "System Settings → Privacy & Security", bofya "Open Anyway" karibu na jina la app.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="soon">
+        <h2 class="i18n" data-en="Coming Soon">Zinakuja</h2>
+        <div class="soon-grid">
+          <div class="soon-card">
+            <strong>App 02</strong><span class="i18n" data-en="In progress">Inajengwa</span>
+          </div>
+          <div class="soon-card">
+            <strong>App 03</strong><span class="i18n" data-en="Planned">Inapangwa</span>
+          </div>
+          <div class="soon-card">
+            <strong>Issubi Research</strong
+            ><span class="i18n" data-en="First reports coming soon">Ripoti za kwanza zinakuja</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="wrap foot-row">
+        <div>
+          <div class="logo"><span style="color: #2f6c51">Issubi</span></div>
+          <p style="margin-top: 6px" class="i18n" data-en="An institution being built in Mbeya, Tanzania.">
+            Taasisi inayojengwa jijini Mbeya, Tanzania.
+          </p>
+        </div>
+        <p>© 2026 Issubi</p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var STORAGE_KEY = "issubi-lang";
+        var toggleBtn = document.getElementById("langToggle");
+
+        function applyLang(lang) {
+          document.querySelectorAll(".i18n").forEach(function (el) {
+            if (!el.dataset.swCache) {
+              el.dataset.swCache = el.innerHTML;
+            }
+            el.innerHTML = lang === "en" ? el.dataset.en : el.dataset.swCache;
+          });
+          document.documentElement.lang = lang;
+          toggleBtn.textContent = lang === "en" ? "SW" : "EN";
+          try {
+            localStorage.setItem(STORAGE_KEY, lang);
+          } catch (e) {}
+        }
+
+        var saved;
+        try {
+          saved = localStorage.getItem(STORAGE_KEY);
+        } catch (e) {
+          saved = null;
+        }
+        var initialLang = saved === "en" ? "en" : "sw";
+        applyLang(initialLang);
+
+        toggleBtn.addEventListener("click", function () {
+          var current = document.documentElement.lang === "en" ? "en" : "sw";
+          applyLang(current === "en" ? "sw" : "en");
+        });
+      })();
+    </script>
+  </body>
+</html>
