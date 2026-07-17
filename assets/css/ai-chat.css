@@ -1,0 +1,47 @@
+/* ================= AI CHAT ================= */
+.ai-msg {
+  font-size: 12.5px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  max-width: 88%;
+}
+.ai-msg.user {
+  background: #1e2a2f;
+  color: var(--mist);
+  margin-left: auto;
+  border-bottom-right-radius: 2px;
+}
+.ai-msg.bot {
+  background: rgba(51, 230, 193, 0.08);
+  color: var(--mist);
+  border: 1px solid #22403a;
+  border-bottom-left-radius: 2px;
+}
+.ai-input {
+  display: flex;
+  gap: 8px;
+  padding: 12px 14px;
+  border-top: 1px solid #1e2a2f;
+}
+.ai-input input {
+  flex: 1;
+  background: #0f1518;
+  border: 1px solid #24343a;
+  border-radius: 8px;
+  color: var(--mist);
+  font-family: inherit;
+  font-size: 12.5px;
+  padding: 8px 10px;
+}
+.ai-input button {
+  background: var(--signal);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #08211c;
+  font-weight: 600;
+  font-size: 12px;
+}
