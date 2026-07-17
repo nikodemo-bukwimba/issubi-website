@@ -1,733 +1,890 @@
-<!doctype html>
-<html lang="sw">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Issubi — Apps zinazoendelezwa Mbeya, kwa Tanzania</title>
-    <meta
-      name="description"
-      content="Issubi ni nyumbani kwa apps zinazoendelezwa Mbeya, Tanzania. Pakua Pharmacy App na nyingine nyingi zinazokuja."
-    />
-    <meta
-      property="og:title"
-      content="Issubi — Apps zinazoendelezwa Mbeya, kwa Tanzania"
-    />
-    <meta
-      property="og:description"
-      content="Issubi ni nyumbani kwa apps zinazoendelezwa Mbeya, Tanzania. Pakua Pharmacy App na nyingine nyingi zinazokuja."
-    />
-    <meta
-      property="og:url"
-      content="https://sweet-mermaid-7c3253.netlify.app/"
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://sweet-mermaid-7c3253.netlify.app/og-image.png"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --paper: #f7f4ec;
-        --ink: #1c2b22;
-        --green: #2f6c51;
-        --green-dark: #204b38;
-        --ochre: #c76a3b;
-        --line: #dcd5c3;
-        --paper-raised: #ffffff;
-      }
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        margin: 0;
-        background: var(--paper);
-        color: var(--ink);
-        font-family: "Inter", sans-serif;
-        line-height: 1.6;
-      }
-      h1,
-      h2,
-      h3 {
-        font-family: "Fraunces", serif;
-        font-weight: 600;
-        margin: 0;
-      }
-      .wrap {
-        max-width: 880px;
-        margin: 0 auto;
-        padding: 0 24px;
-      }
-      a {
-        color: inherit;
-      }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Issubi — Apps &amp; a Web3 + AI Learning Platform, Built in Mbeya, Tanzania</title>
+<meta name="description" content="Issubi builds offline-first software for African businesses and Issubi Academy, a bilingual (EN/SW) Web3 + AI learning platform.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://issubi.com/">
 
-      /* NAV */
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 28px 24px;
-        max-width: 880px;
-        margin: 0 auto;
-      }
-      .logo {
-        font-family: "Fraunces", serif;
-        font-size: 20px;
-        font-weight: 600;
-        letter-spacing: 0.02em;
-      }
-      .logo span {
-        color: var(--green);
-      }
-      .nav-right {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .lang-btn {
-        font-family: "IBM Plex Mono", monospace;
-        font-size: 12px;
-        background: none;
-        border: 1px solid var(--line);
-        color: #6b6354;
-        padding: 7px 12px;
-        border-radius: 999px;
-        cursor: pointer;
-      }
-      .lang-btn:hover {
-        border-color: var(--green);
-        color: var(--green-dark);
-      }
-      nav a.cta-small {
-        font-family: "IBM Plex Mono", monospace;
-        font-size: 13px;
-        border: 1px solid var(--ink);
-        padding: 8px 16px;
-        border-radius: 999px;
-        text-decoration: none;
-      }
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Issubi">
+<meta property="og:title" content="Issubi — Apps &amp; a Web3 + AI Learning Platform, Built in Mbeya, Tanzania">
+<meta property="og:description" content="Offline-first apps for African businesses, plus Issubi Academy — a bilingual Web3 + AI learning platform.">
+<meta property="og:url" content="https://issubi.com/">
+<meta property="og:image" content="https://issubi.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="sw_TZ">
 
-      /* HERO */
-      .hero {
-        padding: 48px 0 64px;
-        border-bottom: 1px solid var(--line);
-      }
-      .eyebrow {
-        font-family: "IBM Plex Mono", monospace;
-        font-size: 13px;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: var(--green);
-        margin-bottom: 18px;
-      }
-      .hero h1 {
-        font-size: 42px;
-        line-height: 1.15;
-        max-width: 11ch;
-      }
-      .hero p.lead {
-        font-size: 18px;
-        color: #3d4a40;
-        max-width: 38ch;
-        margin-top: 18px;
-      }
-      @media (min-width: 640px) {
-        .hero h1 {
-          font-size: 54px;
-        }
-      }
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Issubi — Apps &amp; a Web3 + AI Learning Platform">
+<meta name="twitter:description" content="Offline-first apps for African businesses, plus Issubi Academy — a bilingual Web3 + AI learning platform.">
+<meta name="twitter:image" content="https://issubi.com/og-image.jpg">
 
-      /* APP SHELF */
-      .shelf {
-        padding: 56px 0;
-        border-bottom: 1px solid var(--line);
-      }
-      .shelf h2 {
-        font-size: 14px;
-        font-family: "IBM Plex Mono", monospace;
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: #6b6354;
-        margin-bottom: 28px;
-      }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#10161A;
+    --panel:#161F24;
+    --panel-2:#1B262C;
+    --highland:#1F5C43;
+    --highland-bright:#2F8A63;
+    --terra:#A8461F;
+    --terra-bright:#C85A2E;
+    --signal:#33E6C1;
+    --mist:#C9D6D3;
+    --mist-dim:#7E938E;
+    --paper:#F3EFE6;
+    --paper-line:#DCD4C2;
+    --ink-on-paper:#1B1712;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--ink);
+    color:var(--mist);
+    font-family:'Space Grotesk', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:'Source Serif 4', serif;}
+  .mono{font-family:'JetBrains Mono', monospace;}
 
-      .app-card {
-        background: var(--paper-raised);
-        border: 1px solid var(--line);
-        border-radius: 4px;
-        padding: 32px;
-        position: relative;
-        overflow: hidden;
-      }
-      .app-tab {
-        position: absolute;
-        top: 0;
-        right: 0;
-        background: var(--green);
-        color: #eaf3de;
-        font-family: "IBM Plex Mono", monospace;
-        font-size: 12px;
-        padding: 6px 14px;
-        border-bottom-left-radius: 4px;
-      }
-      .app-card h3 {
-        font-size: 26px;
-        margin-bottom: 8px;
-      }
-      .app-card .tagline {
-        color: #5a6b5e;
-        font-size: 15px;
-        margin-bottom: 20px;
-      }
-      .app-meta {
-        display: flex;
-        gap: 18px;
-        flex-wrap: wrap;
-        font-family: "IBM Plex Mono", monospace;
-        font-size: 12px;
-        color: #6b6354;
-        margin-bottom: 24px;
-      }
-      .app-meta span {
-        border: 1px solid var(--line);
-        padding: 4px 10px;
-        border-radius: 999px;
-      }
+  /* ---------- fake browser chrome ---------- */
+  .chrome{
+    background:#0B1013;
+    border-bottom:1px solid #232E33;
+    padding:10px 16px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .dots{display:flex;gap:6px;}
+  .dots span{width:10px;height:10px;border-radius:50%;background:#2A363C;}
+  .urlbar{
+    flex:1;
+    background:#141C20;
+    border:1px solid #232E33;
+    border-radius:8px;
+    padding:6px 12px;
+    font-size:12.5px;
+    color:var(--mist-dim);
+    max-width:460px;
+  }
+  .urlbar b{color:var(--signal); font-weight:500;}
 
-      .download-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        background: var(--green);
-        color: #fff;
-        font-family: "Inter", sans-serif;
-        font-weight: 600;
-        font-size: 15px;
-        padding: 14px 26px;
-        border-radius: 4px;
-        text-decoration: none;
-        border: none;
-      }
-      .download-btn:hover {
-        background: var(--green-dark);
-      }
-      .download-sub {
-        font-family: "IBM Plex Mono", monospace;
-        font-size: 12px;
-        color: #8a8270;
-        margin-top: 10px;
-      }
+  /* ---------- nav ---------- */
+  .topnav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 32px;
+    border-bottom:1px solid #1E2A2F;
+  }
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:18px;color:#fff;letter-spacing:-0.01em;}
+  .brand .mark{
+    width:26px;height:26px;border-radius:7px;
+    background:linear-gradient(135deg,var(--highland),var(--signal));
+    display:inline-block;
+  }
+  .navlinks{display:flex;gap:28px;align-items:center;}
+  .navlinks button{
+    background:none;border:none;color:var(--mist-dim);
+    font-family:inherit;font-size:14.5px;cursor:pointer;padding:6px 2px;
+    border-bottom:2px solid transparent;
+    transition:color .15s;
+  }
+  .navlinks button:hover{color:var(--mist);}
+  .navlinks button.active{color:#fff;border-bottom-color:var(--signal);}
 
-      .download-btn.is-soon {
-        background: transparent;
-        color: #8a8270;
-        border: 1px dashed #c7bfa9;
-        cursor: default;
-      }
-      .soon-note {
-        font-size: 13px;
-        color: #6b6354;
-        margin-top: 4px;
-        margin-bottom: 18px;
-      }
+  .navright{display:flex;align-items:center;gap:16px;}
+  .langtoggle{
+    display:flex;background:#141C20;border:1px solid #263239;border-radius:20px;padding:3px;
+  }
+  .langtoggle button{
+    border:none;background:none;color:var(--mist-dim);font-family:'JetBrains Mono';
+    font-size:12px;padding:5px 12px;border-radius:16px;cursor:pointer;transition:.15s;
+  }
+  .langtoggle button.active{background:var(--signal);color:#08211C;font-weight:500;}
+  .cta{
+    background:var(--signal);color:#08211C;border:none;padding:9px 18px;
+    border-radius:9px;font-weight:600;font-size:14px;cursor:pointer;font-family:inherit;
+  }
+  .wallet-btn{
+    background:none;border:1px solid var(--terra);color:var(--terra-bright);
+    padding:9px 16px;border-radius:9px;font-family:'JetBrains Mono';font-size:12.5px;
+    cursor:pointer;display:flex;align-items:center;gap:7px;transition:.15s;
+  }
+  .wallet-btn .wdot{width:7px;height:7px;border-radius:50%;background:var(--terra-bright);}
+  .wallet-btn.connected{border-color:var(--signal);color:var(--signal);}
+  .wallet-btn.connected .wdot{background:var(--signal);}
 
-      .whatsapp-line {
-        margin-top: 18px;
-        font-size: 14px;
-        color: #3d4a40;
-      }
-      .whatsapp-line a {
-        color: var(--ochre);
-        font-weight: 600;
-        text-decoration: none;
-        border-bottom: 1px solid var(--ochre);
-      }
+  /* ---- AI tutor ---- */
+  .ai-fab{
+    position:fixed;bottom:26px;right:26px;width:56px;height:56px;border-radius:50%;
+    background:linear-gradient(135deg,var(--highland),var(--signal));border:none;cursor:pointer;
+    box-shadow:0 6px 24px rgba(51,230,193,0.25);z-index:40;font-size:22px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .ai-fab .pulse{
+    position:absolute;top:-2px;right:-2px;width:12px;height:12px;border-radius:50%;
+    background:var(--terra-bright);border:2px solid var(--ink);
+  }
+  .ai-panel{
+    position:fixed;bottom:92px;right:26px;width:320px;background:var(--panel);
+    border:1px solid #24343A;border-radius:16px;box-shadow:0 20px 50px rgba(0,0,0,.4);
+    z-index:41;overflow:hidden;display:none;
+  }
+  .ai-panel.open{display:block;}
+  .ai-head{padding:14px 16px;background:#141C20;display:flex;justify-content:space-between;align-items:center;}
+  .ai-head b{color:#fff;font-size:13.5px;}
+  .ai-head span{font-family:'JetBrains Mono';font-size:10px;color:var(--mist-dim);display:block;margin-top:2px;}
+  .ai-head button{background:none;border:none;color:var(--mist-dim);cursor:pointer;font-size:15px;}
+  .ai-body{padding:14px 16px;max-height:260px;overflow-y:auto;}
+  .ai-msg{font-size:12.5px;line-height:1.5;margin-bottom:12px;padding:9px 12px;border-radius:10px;max-width:88%;}
+  .ai-msg.user{background:#1E2A2F;color:var(--mist);margin-left:auto;border-bottom-right-radius:2px;}
+  .ai-msg.bot{background:rgba(51,230,193,0.08);color:var(--mist);border:1px solid #22403A;border-bottom-left-radius:2px;}
+  .ai-input{display:flex;gap:8px;padding:12px 14px;border-top:1px solid #1E2A2F;}
+  .ai-input input{flex:1;background:#0F1518;border:1px solid #24343A;border-radius:8px;color:var(--mist);font-family:inherit;font-size:12.5px;padding:8px 10px;}
+  .ai-input button{background:var(--signal);border:none;border-radius:8px;padding:8px 12px;cursor:pointer;color:#08211C;font-weight:600;font-size:12px;}
 
-      /* PLATFORM DOWNLOADS */
-      .platform-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 16px;
-        margin-bottom: 6px;
-      }
-      .platform-block {
-        border: 1px solid var(--line);
-        border-radius: 4px;
-        padding: 18px;
-        background: var(--paper);
-      }
-      .platform-name {
-        font-family: "IBM Plex Mono", monospace;
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        color: #6b6354;
-        margin-bottom: 12px;
-      }
-      .platform-block .download-btn {
-        width: 100%;
-        justify-content: center;
-        padding: 12px 18px;
-        font-size: 14px;
-      }
-      .platform-block .download-sub {
-        margin-top: 8px;
-        text-align: center;
-      }
+  .explain-btn{
+    background:rgba(31,92,67,0.08);border:1px solid var(--highland);color:var(--highland);
+    font-family:'JetBrains Mono';font-size:11.5px;padding:6px 12px;border-radius:16px;
+    cursor:pointer;margin:4px 0 22px;display:inline-flex;align-items:center;gap:6px;
+  }
+  .code-review{
+    background:rgba(51,230,193,0.05);border:1px solid #22403A;border-radius:10px;
+    padding:12px 14px;margin-top:-8px;margin-bottom:22px;font-size:12.5px;line-height:1.6;color:#3A342B;
+  }
+  .code-review b{font-family:'JetBrains Mono';font-size:10.5px;color:var(--highland);text-transform:uppercase;letter-spacing:.04em;display:block;margin-bottom:4px;}
 
-      /* PLATFORM INSTALL TABS */
-      .platform-tabs {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 36px;
-      }
-      @media (min-width: 720px) {
-        .platform-tabs {
-          grid-template-columns: repeat(3, 1fr);
-          gap: 28px;
-        }
-      }
-      .platform-col-title {
-        font-family: "Fraunces", serif;
-        font-size: 17px;
-        font-weight: 600;
-        margin-bottom: 4px;
-        color: var(--green-dark);
-      }
-      .platform-col .step {
-        padding: 14px 0;
-      }
+  .quiz-card{
+    background:#EBE6D9;border:1px solid var(--paper-line);border-radius:12px;padding:22px;margin:28px 0;
+  }
+  .quiz-card h4{margin:0 0 4px;font-size:15px;color:#1B1712;}
+  .quiz-card .qtag{font-family:'JetBrains Mono';font-size:10.5px;color:var(--highland);text-transform:uppercase;letter-spacing:.05em;}
+  .quiz-card p{font-size:14px;margin:10px 0 14px;color:#3A342B;}
+  .qopt{display:block;width:100%;text-align:left;background:#fff;border:1px solid var(--paper-line);
+    border-radius:8px;padding:10px 14px;margin-bottom:8px;font-family:inherit;font-size:13.5px;cursor:pointer;color:#3A342B;}
+  .qopt.correct{border-color:var(--highland);background:rgba(31,92,67,0.08);color:var(--highland);font-weight:600;}
+  .qopt.wrong{border-color:var(--terra);background:rgba(168,70,31,0.08);color:var(--terra);}
+  .qfeedback{font-size:12.5px;color:var(--mist-dim);margin-top:10px;font-family:'JetBrains Mono';display:none;}
+  .qfeedback.show{display:block;}
 
-      /* INSTALL STEPS — prescription style */
-      .install {
-        padding: 56px 0;
-        border-bottom: 1px solid var(--line);
-      }
-      .install h2 {
-        font-size: 14px;
-        font-family: "IBM Plex Mono", monospace;
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: #6b6354;
-        margin-bottom: 8px;
-      }
-      .install .install-title {
-        font-family: "Fraunces", serif;
-        font-size: 24px;
-        font-weight: 600;
-        margin-bottom: 28px;
-      }
-      .step {
-        display: flex;
-        gap: 18px;
-        padding: 18px 0;
-        border-top: 1px solid var(--line);
-      }
-      .step:first-of-type {
-        border-top: none;
-      }
-      .step-num {
-        font-family: "IBM Plex Mono", monospace;
-        font-size: 13px;
-        color: var(--ochre);
-        min-width: 28px;
-        padding-top: 2px;
-      }
-      .step-text strong {
-        display: block;
-        font-size: 15px;
-        margin-bottom: 2px;
-      }
-      .step-text span {
-        font-size: 14px;
-        color: #5a6b5e;
-      }
+  /* ---- token gating / certificates ---- */
+  .lock-overlay{
+    position:absolute;inset:0;background:rgba(16,22,26,0.88);border-radius:14px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;
+    transition:opacity .25s;
+  }
+  .lock-overlay.hidden{opacity:0;pointer-events:none;}
+  .lock-overlay .lockicon{font-size:22px;margin-bottom:8px;}
+  .lock-overlay p{font-size:12px;color:var(--mist-dim);margin:0 0 4px;line-height:1.5;}
+  .lock-overlay b{color:var(--signal);font-size:12px;}
+  .paytoggle{display:flex;gap:6px;margin-bottom:10px;}
+  .paytoggle button{
+    flex:1;background:#0F1518;border:1px solid #263239;color:var(--mist-dim);
+    font-family:'JetBrains Mono';font-size:10.5px;padding:6px;border-radius:6px;cursor:pointer;
+  }
+  .paytoggle button.active{background:var(--signal);color:#08211C;border-color:var(--signal);font-weight:600;}
 
-      /* COMING SOON */
-      .soon {
-        padding: 56px 0;
-      }
-      .soon h2 {
-        font-size: 14px;
-        font-family: "IBM Plex Mono", monospace;
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: #6b6354;
-        margin-bottom: 20px;
-      }
-      .soon-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 14px;
-      }
-      .soon-card {
-        border: 1px dashed var(--line);
-        border-radius: 4px;
-        padding: 18px;
-        color: #8a8270;
-      }
-      .soon-card strong {
-        display: block;
-        color: #5a6b5e;
-        font-family: "Fraunces", serif;
-        font-size: 16px;
-        font-weight: 500;
-      }
-      .soon-card span {
-        font-size: 13px;
-      }
+  .cert-card{
+    background:linear-gradient(135deg, rgba(31,92,67,0.15), rgba(51,230,193,0.05));
+    border:1px solid #244038;border-radius:16px;padding:28px;display:flex;gap:24px;align-items:center;
+  }
+  .cert-icon{
+    width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--highland),var(--signal));
+    display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0;
+  }
+  .cert-card h4{color:#fff;margin:0 0 4px;font-size:16px;}
+  .cert-card .hash{font-family:'JetBrains Mono';font-size:12px;color:var(--signal);margin:6px 0;}
+  .cert-card .meta{font-family:'JetBrains Mono';font-size:11px;color:var(--mist-dim);}
+  .cert-actions{display:flex;gap:10px;margin-left:auto;}
+  .cert-actions button{
+    background:none;border:1px solid #2A3A40;color:var(--mist);padding:8px 14px;border-radius:8px;
+    font-family:inherit;font-size:12.5px;cursor:pointer;
+  }
 
-      footer {
-        padding: 40px 0 56px;
-      }
-      .foot-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        flex-wrap: wrap;
-        gap: 16px;
-      }
-      footer p {
-        font-size: 13px;
-        color: #8a8270;
-        margin: 0;
-      }
-      footer .logo {
-        font-size: 16px;
-      }
-    </style>
-  </head>
-  <body>
-    <nav>
-      <div class="logo"><span>Issubi</span></div>
-      <div class="nav-right">
-        <button id="langToggle" class="lang-btn" aria-label="Switch language">
-          EN
-        </button>
-        <a class="cta-small i18n" href="#apps" data-en="View App">Tazama App</a>
-      </div>
+  /* ---- products page ---- */
+  .app-tag{font-family:'JetBrains Mono';font-size:12px;color:var(--signal);display:block;margin-bottom:10px;}
+  .product-card{background:var(--panel);border:1px solid #1E2A2F;border-radius:18px;padding:32px;margin-bottom:26px;}
+  .product-badges{display:flex;gap:8px;margin:16px 0 26px;}
+  .product-badge{font-family:'JetBrains Mono';font-size:11px;padding:4px 10px;border-radius:20px;border:1px solid #2A3A40;color:var(--mist-dim);}
+  .product-badge.offline{border-color:var(--highland);color:var(--highland-bright);}
+
+  .download-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:30px;}
+  .download-card{background:var(--panel-2);border:1px solid #22303600;border:1px solid #22303a;border-radius:14px;padding:20px;}
+  .dc-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;}
+  .download-card h4{margin:0;color:#fff;font-size:15px;}
+  .coming-badge{font-family:'JetBrains Mono';font-size:10.5px;color:var(--terra-bright);border:1px solid var(--terra);padding:3px 9px;border-radius:20px;white-space:nowrap;}
+  .filemeta{font-family:'JetBrains Mono';font-size:11.5px;color:var(--mist-dim);margin-bottom:16px;line-height:1.6;}
+  .download-card button{width:100%;background:none;border:1px solid #2A3A40;color:var(--mist-dim);padding:9px;border-radius:8px;font-family:inherit;font-size:13px;cursor:not-allowed;}
+
+  .cta-banner{
+    background:linear-gradient(120deg, rgba(31,92,67,0.2), rgba(51,230,193,0.06));
+    border:1px solid #244038;border-radius:14px;padding:24px 28px;
+    display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:36px;
+  }
+  .cta-banner p{margin:0;font-size:13.5px;color:var(--mist-dim);line-height:1.5;max-width:520px;}
+  .cta-banner a{
+    background:var(--highland-bright);color:#fff;text-decoration:none;padding:11px 20px;
+    border-radius:9px;font-weight:600;font-size:14px;white-space:nowrap;
+  }
+
+  .install-tabs{display:flex;gap:10px;margin-bottom:22px;}
+  .install-tabs button{
+    background:var(--panel);border:1px solid #1E2A2F;color:var(--mist-dim);
+    padding:8px 16px;border-radius:20px;font-family:inherit;font-size:13px;cursor:pointer;
+  }
+  .install-tabs button.active{background:var(--signal);color:#08211C;border-color:var(--signal);font-weight:600;}
+  .install-panel{display:none;}
+  .install-panel.active{display:block;}
+  .install-step{display:flex;gap:16px;margin-bottom:20px;}
+  .install-num{
+    width:28px;height:28px;border-radius:50%;background:var(--panel-2);border:1px solid #2A3A40;
+    color:var(--signal);font-family:'JetBrains Mono';font-size:12px;display:flex;align-items:center;
+    justify-content:center;flex-shrink:0;
+  }
+  .install-step h5{margin:0 0 4px;color:#fff;font-size:14px;}
+  .install-step p{margin:0;color:var(--mist-dim);font-size:13px;line-height:1.5;}
+
+  .next-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .next-card{background:var(--panel);border:1px dashed #2A3A40;border-radius:14px;padding:22px;}
+  .next-card h4{color:#fff;margin:0 0 8px;font-size:15px;}
+  .next-status{font-family:'JetBrains Mono';font-size:11px;color:var(--mist-dim);border:1px solid #2A3A40;padding:3px 10px;border-radius:20px;display:inline-block;}
+
+  .view{display:none; animation:fade .35s ease;}
+  .view.active{display:block;}
+  @keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+
+  /* ================= HOME ================= */
+  .hero{
+    padding:72px 32px 60px;
+    max-width:1120px;margin:0 auto;
+    display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:'JetBrains Mono';font-size:12px;color:var(--signal);
+    border:1px solid #22423A;background:rgba(51,230,193,0.06);
+    padding:6px 12px;border-radius:20px;margin-bottom:22px;
+  }
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--signal);}
+  h1.hero-h{
+    font-size:44px;line-height:1.08;letter-spacing:-0.02em;color:#fff;margin:0 0 20px;font-weight:700;
+  }
+  .hero p.sub{font-size:16.5px;line-height:1.6;color:var(--mist-dim);max-width:480px;margin:0 0 28px;}
+  .hero-ctas{display:flex;gap:12px;}
+  .btn-ghost{
+    background:none;border:1px solid #2A3A40;color:var(--mist);padding:12px 20px;
+    border-radius:10px;font-family:inherit;font-size:14.5px;cursor:pointer;font-weight:500;
+  }
+  .btn-primary{
+    background:var(--terra);border:none;color:#fff;padding:12px 22px;
+    border-radius:10px;font-family:inherit;font-size:14.5px;cursor:pointer;font-weight:600;
+  }
+  .stats{display:flex;gap:32px;margin-top:44px;}
+  .stat b{display:block;font-size:22px;color:#fff;font-family:'JetBrains Mono';}
+  .stat span{font-size:12.5px;color:var(--mist-dim);}
+
+  /* node graph signature element */
+  .graph-card{
+    background:var(--panel);border:1px solid #1E2A2F;border-radius:18px;
+    padding:26px; position:relative; height:340px; overflow:hidden;
+  }
+  .graph-card .label{font-family:'JetBrains Mono';font-size:11.5px;color:var(--mist-dim);margin-bottom:16px;display:block;}
+  svg.graph{width:100%;height:100%;}
+  .node-line{stroke:#26383E;stroke-width:1.4;}
+  .node-line.live{stroke:var(--signal);stroke-width:1.6;opacity:.7;}
+  .node circle{fill:var(--panel-2);stroke:#2A3A40;stroke-width:1.4;}
+  .node.active circle{fill:rgba(51,230,193,0.12);stroke:var(--signal);}
+  .node text{fill:var(--mist);font-family:'JetBrains Mono';font-size:10.5px;}
+  .node.active text{fill:#fff;}
+
+  section{max-width:1120px;margin:0 auto;padding:50px 32px;}
+  .section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:28px;}
+  .section-head h2{font-size:24px;color:#fff;margin:0 0 6px;letter-spacing:-0.01em;}
+  .section-head p{color:var(--mist-dim);font-size:14.5px;margin:0;max-width:460px;}
+  .section-head .tag{font-family:'JetBrains Mono';font-size:12px;color:var(--mist-dim);}
+
+  .path-track{display:flex;gap:0;align-items:stretch;overflow-x:auto;padding-bottom:6px;}
+  .path-step{
+    min-width:250px;background:var(--panel);border:1px solid #1E2A2F;border-radius:14px;
+    padding:20px;position:relative;margin-right:20px;
+  }
+  .path-step::after{
+    content:'';position:absolute;top:50%;right:-22px;width:20px;height:1px;background:#2A3A40;
+  }
+  .path-step:last-child::after{display:none;}
+  .path-num{font-family:'JetBrains Mono';font-size:12px;color:var(--signal);margin-bottom:10px;display:block;}
+  .path-step h4{margin:0 0 8px;color:#fff;font-size:16px;}
+  .path-step p{margin:0 0 14px;font-size:13px;color:var(--mist-dim);line-height:1.5;}
+  .path-meta{display:flex;gap:10px;font-family:'JetBrains Mono';font-size:11px;color:var(--mist-dim);}
+  .pill{border:1px solid #2A3A40;border-radius:20px;padding:3px 9px;}
+
+  .diff-banner{
+    background:linear-gradient(120deg, rgba(31,92,67,0.25), rgba(51,230,193,0.06));
+    border:1px solid #244038;border-radius:18px;padding:34px;display:grid;
+    grid-template-columns:repeat(3,1fr);gap:28px;
+  }
+  .diff-item .ico{font-size:20px;margin-bottom:10px;}
+  .diff-item h4{color:#fff;font-size:15px;margin:0 0 6px;}
+  .diff-item p{color:var(--mist-dim);font-size:13px;line-height:1.5;margin:0;}
+
+  footer{border-top:1px solid #1E2A2F;padding:28px 32px;text-align:center;color:var(--mist-dim);font-size:12.5px;}
+
+  /* ================= LESSON VIEW ================= */
+  .lesson-wrap{display:grid;grid-template-columns:250px 1fr 220px;gap:0;max-width:1200px;margin:0 auto;min-height:640px;}
+  .sidebar{border-right:1px solid #1E2A2F;padding:26px 20px;}
+  .sidebar h5{font-family:'JetBrains Mono';font-size:11px;color:var(--mist-dim);text-transform:uppercase;letter-spacing:.06em;margin:0 0 14px;}
+  .tree-group{margin-bottom:18px;}
+  .tree-group summary{cursor:pointer;color:var(--mist);font-size:13.5px;font-weight:500;padding:6px 0;list-style:none;display:flex;justify-content:space-between;}
+  .tree-group summary::-webkit-details-marker{display:none;}
+  .tree-item{
+    display:block;padding:6px 0 6px 14px;font-size:13px;color:var(--mist-dim);
+    border-left:1px solid #22303600; text-decoration:none; cursor:pointer;
+  }
+  .tree-item.current{color:var(--signal);border-left:2px solid var(--signal);padding-left:12px;}
+
+  .reading{background:var(--paper);color:var(--ink-on-paper);padding:48px 56px;min-height:640px;}
+  .badges{display:flex;gap:8px;margin-bottom:18px;}
+  .badge{font-family:'JetBrains Mono';font-size:11px;padding:4px 10px;border-radius:20px;border:1px solid var(--paper-line);color:#4A4136;}
+  .badge.offline{border-color:var(--highland);color:var(--highland);}
+  .reading h1{font-size:32px;line-height:1.15;margin:0 0 18px;letter-spacing:-0.01em;}
+  .reading p{font-size:16px;line-height:1.7;margin:0 0 20px;color:#3A342B;}
+  .reading h3{font-size:19px;margin:34px 0 12px;color:#1B1712;}
+  .callout{
+    background:#EBE6D9;border-left:3px solid var(--terra);padding:16px 18px;border-radius:0 8px 8px 0;
+    margin:22px 0;font-size:14.5px;line-height:1.6;
+  }
+  .callout b{color:var(--terra);}
+  .code{
+    background:#1B1712;color:#E8E2D4;font-family:'JetBrains Mono';font-size:13px;
+    padding:18px 20px;border-radius:10px;line-height:1.6;margin:22px 0;overflow-x:auto;
+  }
+  .code .c1{color:var(--signal);}
+  .code .c2{color:#E8A96A;}
+
+  .rightrail{padding:26px 18px;border-left:1px solid #1E2A2F;}
+  .rightrail h5{font-family:'JetBrains Mono';font-size:11px;color:var(--mist-dim);text-transform:uppercase;letter-spacing:.06em;margin:0 0 14px;}
+  .rightrail a{display:block;font-size:12.5px;color:var(--mist-dim);text-decoration:none;padding:5px 0;}
+  .nextlesson{margin-top:30px;background:var(--panel);border:1px solid #1E2A2F;border-radius:10px;padding:14px;}
+  .nextlesson span{font-family:'JetBrains Mono';font-size:10.5px;color:var(--mist-dim);}
+  .nextlesson strong{display:block;color:#fff;font-size:13.5px;margin-top:4px;}
+
+  /* ================= COURSES VIEW ================= */
+  .filterbar{display:flex;gap:10px;margin-bottom:28px;}
+  .filterbar button{
+    background:var(--panel);border:1px solid #1E2A2F;color:var(--mist-dim);
+    padding:8px 16px;border-radius:20px;font-family:inherit;font-size:13px;cursor:pointer;
+  }
+  .filterbar button.active{background:var(--signal);color:#08211C;border-color:var(--signal);font-weight:600;}
+
+  .course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .course-card{
+    background:var(--panel);border:1px solid #1E2A2F;border-radius:14px;padding:22px;
+    display:flex;flex-direction:column;position:relative;
+  }
+  .course-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;}
+  .course-icon{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,var(--highland),var(--signal));}
+  .price{font-family:'JetBrains Mono';font-size:12.5px;color:var(--signal);}
+  .price.free{color:var(--mist-dim);}
+  .course-card h4{color:#fff;font-size:16px;margin:0 0 8px;}
+  .course-card p{font-size:13px;color:var(--mist-dim);line-height:1.55;margin:0 0 18px;flex:1;}
+  .course-meta{display:flex;gap:8px;font-family:'JetBrains Mono';font-size:11px;color:var(--mist-dim);margin-bottom:14px;}
+  .course-card button{
+    background:none;border:1px solid #2A3A40;color:var(--mist);padding:9px;border-radius:8px;
+    font-family:inherit;font-size:13px;cursor:pointer;
+  }
+</style>
+</head>
+<body>
+
+  <div class="chrome" role="presentation" aria-hidden="true">
+    <div class="dots"><span></span><span></span><span></span></div>
+    <div class="urlbar" id="urlbar">issubi.com/<b>en</b>/</div>
+  </div>
+
+  <header class="topnav">
+    <div class="brand"><span class="mark"></span> Issubi Academy</div>
+    <nav class="navlinks" aria-label="Main navigation">
+      <button id="nav-products" class="active" onclick="showView('products', this)" data-en="Products" data-sw="Bidhaa">Products</button>
+      <button id="nav-academy" onclick="showView('home', this)" data-en="Academy" data-sw="Academy">Academy</button>
+      <button id="nav-docs" onclick="showView('lesson', this)" data-en="Docs" data-sw="Masomo">Docs</button>
+      <button id="nav-courses" onclick="showView('courses', this)" data-en="Courses" data-sw="Kozi">Courses</button>
+      <button data-en="Community" data-sw="Jumuiya">Community</button>
     </nav>
+    <div class="navright">
+      <div class="langtoggle" role="group" aria-label="Language">
+        <button class="active" id="lang-en" onclick="setLang('en')" aria-pressed="true">EN</button>
+        <button id="lang-sw" onclick="setLang('sw')" aria-pressed="false">SW</button>
+      </div>
+      <button class="wallet-btn" id="walletBtn" onclick="toggleWallet()"><span class="wdot"></span><span id="walletLabel" data-en="Connect Wallet" data-sw="Unganisha Pochi">Connect Wallet</span></button>
+      <button class="cta" data-en="Start learning" data-sw="Anza kujifunza">Start learning</button>
+    </div>
+  </header>
 
-    <div class="wrap">
-      <section class="hero">
-        <div class="eyebrow">Mbeya, Tanzania</div>
-        <h1
-          class="i18n"
-          data-en="Apps built for the reality of African businesses."
-        >
-          Apps zinazoendelezwa kwa uhalisia wa biashara za Kiafrika.
-        </h1>
-        <p
-          class="lead i18n"
-          data-en="Issubi is where you find apps built from scratch — working without internet, for people who need them to work first, before they need them to look fancy."
-        >
-          Issubi ni mahali pa kupata apps zinazoendelezwa kuanzia chini(From
-          scratch) — zikifanya kazi bila mtandao, kwa watu wanaohitaji zifanye
-          kazi kwanza, kabla ya kuwa za kifahari.
-        </p>
-      </section>
-
-      <section class="shelf" id="apps">
-        <h2 class="i18n" data-en="First App">App ya kwanza</h2>
-        <div class="app-card">
-          <div class="app-tab">APP 01</div>
-          <h3>Pharmacy Manager</h3>
-          <p
-            class="tagline i18n"
-            data-en="A system for managing pharmacies — sales, stock, and records — that works without internet."
-          >
-            Mfumo wa kusimamia maduka ya dawa(Pharmacies) — mauzo, stock, na
-            rekodi — unaofanya kazi bila mtandao.
-          </p>
-          <div class="app-meta">
-            <span>Offline-first</span>
-            <span>Android</span>
-            <span>v1.0</span>
-          </div>
-          <div class="app-meta">
-            <span>Offline-first</span>
-            <span>Android · Windows · macOS</span>
-            <span>v1.0</span>
-          </div>
-
-          <div class="platform-grid">
-            <div class="platform-block">
-              <div class="platform-name">Android</div>
-              <span
-                class="download-btn is-soon i18n"
-                data-en="Coming in August"
-                aria-disabled="true"
-              >
-                Inakuja Agosti
-              </span>
-              <div
-                class="download-sub i18n"
-                data-en=".apk — approx. 25MB · Android 8.0+"
-              >
-                .apk — karibu MB 25 · Android 8.0+
-              </div>
-            </div>
-
-            <div class="platform-block">
-              <div class="platform-name">Windows</div>
-              <span
-                class="download-btn is-soon i18n"
-                data-en="Coming in August"
-                aria-disabled="true"
-              >
-                Inakuja Agosti
-              </span>
-              <div
-                class="download-sub i18n"
-                data-en=".zip — approx. 60MB · Windows 10/11"
-              >
-                .zip — karibu MB 60 · Windows 10/11
-              </div>
-            </div>
-
-            <div class="platform-block">
-              <div class="platform-name">macOS</div>
-              <span
-                class="download-btn is-soon i18n"
-                data-en="Coming in August"
-                aria-disabled="true"
-              >
-                Inakuja Agosti
-              </span>
-              <div
-                class="download-sub i18n"
-                data-en=".dmg — approx. 65MB · macOS 12+"
-              >
-                .dmg — karibu MB 65 · macOS 12+
-              </div>
-            </div>
-          </div>
-
-          <p
-            class="soon-note i18n"
-            data-en="Pharmacy Manager v1.0 launches officially in August 2026. Join the WhatsApp list so we can send you the download link on launch day."
-          >
-            Pharmacy Manager v1.0 inazinduliwa rasmi Agosti 2026. Jiunge na
-            orodha ya WhatsApp ili tukutumie link ya kupakua siku ya uzinduzi.
-          </p>
-
-          <p
-            class="whatsapp-line i18n"
-            data-en='Join the launch list — <a href="https://wa.me/255755977960" target="_blank" rel="noopener">Message us on WhatsApp</a>, and we will send you the link on launch day.'
-          >
-            Jiunge na orodha ya uzinduzi —
-            <a href="https://wa.me/255755977960" target="_blank" rel="noopener"
-              >Tutumie WhatsApp</a
-            >, tutakutumia link siku ya uzinduzi.
-          </p>
+  <!-- ================= HOME / ACADEMY VIEW ================= -->
+  <div class="view" id="view-home">
+    <div class="hero">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> <span data-en="WEB3 + AI · BUILT FOR OFFLINE-FIRST LEARNING" data-sw="WEB3 + AI · IMEUNDWA KWA KUJIFUNZA NJE YA MTANDAO">WEB3 + AI · BUILT FOR OFFLINE-FIRST LEARNING</span></div>
+        <h1 class="hero-h" data-en="Learn Web3 and AI the way you'd read the best docs on the internet." data-sw="Jifunze Web3 na AI kwa jinsi unavyosoma nyaraka bora zaidi mtandaoni.">Learn Web3 and AI the way you'd read the best docs on the internet.</h1>
+        <p class="sub" data-en="Free, plain-written lessons for every concept — plus guided paid courses when you want structure. Written first. Works offline. Bilingual, always." data-sw="Masomo ya bure, yaliyoandikwa kwa lugha rahisi kwa kila dhana — pamoja na kozi za malipo zenye muundo. Yameandikwa kwanza. Yanafanya kazi nje ya mtandao. Lugha mbili, kila wakati.">Free, plain-written lessons for every concept — plus guided paid courses when you want structure. Written first. Works offline. Bilingual, always.</p>
+        <div class="hero-ctas">
+          <button class="btn-primary" onclick="showView('lesson', document.getElementById('nav-docs'))" data-en="Explore the docs" data-sw="Angalia masomo">Explore the docs</button>
+          <button class="btn-ghost" onclick="showView('courses', document.getElementById('nav-courses'))" data-en="Browse courses" data-sw="Vinjari kozi">Browse courses</button>
         </div>
-      </section>
-
-      <section class="install">
-        <h2 class="i18n" data-en="Instructions">Maelekezo</h2>
-        <div
-          class="install-title i18n"
-          data-en="How to install the app after downloading"
-        >
-          Jinsi ya kufunga app baada ya kupakua
+        <div class="stats">
+          <div class="stat"><b>142</b><span data-en="written lessons" data-sw="masomo yaliyoandikwa">written lessons</span></div>
+          <div class="stat"><b>18</b><span data-en="guided courses" data-sw="kozi zenye muundo">guided courses</span></div>
+          <div class="stat"><b>100%</b><span data-en="offline-ready" data-sw="tayari nje ya mtandao">offline-ready</span></div>
         </div>
-
-        <div class="platform-tabs">
-          <div class="platform-col">
-            <div class="platform-col-title">Android</div>
-            <div class="step">
-              <div class="step-num">01</div>
-              <div
-                class="step-text i18n"
-                data-en='<strong>Tap the APK file you downloaded</strong><span>It appears in your phone&#39;s "Downloads".</span>'
-              >
-                <strong>Bofya faili la APK ulilolipakua</strong>
-                <span>Linaonekana kwenye "Downloads" ya simu yako.</span>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-num">02</div>
-              <div
-                class="step-text i18n"
-                data-en='<strong>"Unknown source" warning</strong><span>Tap "Settings" on that message, then switch "Allow from this source" to On.</span>'
-              >
-                <strong>Onyo la "Unknown source"</strong>
-                <span
-                  >Bofya "Settings" kwenye ujumbe huo, geuza "Allow from this
-                  source" kuwa On.</span
-                >
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-num">03</div>
-              <div
-                class="step-text i18n"
-                data-en='<strong>Tap "Install" again</strong><span>The app will install within a few seconds.</span>'
-              >
-                <strong>Bofya "Install" tena</strong>
-                <span>App itafungwa ndani ya sekunde chache.</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="platform-col">
-            <div class="platform-col-title">Windows</div>
-            <div class="step">
-              <div class="step-num">01</div>
-              <div
-                class="step-text i18n"
-                data-en='<strong>Open the .zip file you downloaded</strong><span>Click "Extract All" to get the app folder.</span>'
-              >
-                <strong>Fungua faili la .zip ulilolipakua</strong>
-                <span>Bofya "Extract All" kupata folder ya app.</span>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-num">02</div>
-              <div
-                class="step-text i18n"
-                data-en='<strong>"Windows protected your PC" warning</strong><span>Click "More info", then "Run anyway" — this is normal for apps without a Microsoft Store license.</span>'
-              >
-                <strong>Onyo la "Windows protected your PC"</strong>
-                <span
-                  >Bofya "More info", kisha "Run anyway" — hii ni kawaida kwa
-                  apps bila Microsoft Store license.</span
-                >
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-num">03</div>
-              <div
-                class="step-text i18n"
-                data-en='<strong>Open the .exe file inside the folder</strong><span>The app opens directly — no extra "install" needed.</span>'
-              >
-                <strong>Fungua faili la .exe ndani ya folder</strong>
-                <span
-                  >App itafunguka moja kwa moja, hauhitaji "install" ya
-                  ziada.</span
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="platform-col">
-            <div class="platform-col-title">macOS</div>
-            <div class="step">
-              <div class="step-num">01</div>
-              <div
-                class="step-text i18n"
-                data-en="<strong>Open the .dmg file you downloaded</strong><span>A new window opens with the app icon.</span>"
-              >
-                <strong>Fungua faili la .dmg ulilolipakua</strong>
-                <span>Dirisha jipya litafunguka likiwa na icon ya app.</span>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-num">02</div>
-              <div
-                class="step-text i18n"
-                data-en='<strong>Drag the icon into "Applications"</strong><span>Then close that window.</span>'
-              >
-                <strong>Vuta icon kwenda "Applications"</strong>
-                <span>Kisha funga dirisha hilo.</span>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-num">03</div>
-              <div
-                class="step-text i18n"
-                data-en='<strong>"Apple cannot verify" warning</strong><span>Open "System Settings → Privacy &amp; Security", click "Open Anyway" next to the app&#39;s name.</span>'
-              >
-                <strong>Onyo la "Apple cannot verify"</strong>
-                <span
-                  >Fungua "System Settings → Privacy & Security", bofya "Open
-                  Anyway" karibu na jina la app.</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="soon">
-        <h2 class="i18n" data-en="Coming Soon">Zinakuja</h2>
-        <div class="soon-grid">
-          <div class="soon-card">
-            <strong>App 02</strong
-            ><span class="i18n" data-en="In progress">Inajengwa</span>
-          </div>
-          <div class="soon-card">
-            <strong>App 03</strong
-            ><span class="i18n" data-en="Planned">Inapangwa</span>
-          </div>
-          <div class="soon-card">
-            <strong>Issubi Research Center</strong
-            ><span class="i18n" data-en="First reports coming soon"
-              >Ripoti za kwanza zinakuja</span
-            >
-          </div>
-        </div>
-      </section>
+      </div>
+      <div class="graph-card">
+        <span class="label" data-en="// live topic map" data-sw="// ramani ya masomo">// live topic map</span>
+        <svg class="graph" viewBox="0 0 300 260" role="img" aria-label="Topic map showing connections between Web3, AI, Chains, Wallets, Contracts, and Agents">
+          <title>Web3 and AI topic map</title>
+          <line class="node-line live" x1="150" y1="40" x2="80" y2="110"/>
+          <line class="node-line" x1="150" y1="40" x2="220" y2="110"/>
+          <line class="node-line live" x1="80" y1="110" x2="80" y2="190"/>
+          <line class="node-line" x1="80" y1="110" x2="150" y2="190"/>
+          <line class="node-line" x1="220" y1="110" x2="220" y2="190"/>
+          <line class="node-line live" x1="150" y1="40" x2="150" y2="190"/>
+          <g class="node active"><circle cx="150" cy="40" r="26"/><text x="150" y="45" text-anchor="middle">Web3</text></g>
+          <g class="node"><circle cx="80" cy="110" r="24"/><text x="80" y="115" text-anchor="middle">Chains</text></g>
+          <g class="node active"><circle cx="220" cy="110" r="24"/><text x="220" y="115" text-anchor="middle">AI</text></g>
+          <g class="node"><circle cx="80" cy="190" r="22"/><text x="80" y="195" text-anchor="middle">Wallets</text></g>
+          <g class="node"><circle cx="150" cy="190" r="22"/><text x="150" y="195" text-anchor="middle">Contracts</text></g>
+          <g class="node active"><circle cx="220" cy="190" r="22"/><text x="220" y="195" text-anchor="middle">Agents</text></g>
+        </svg>
+      </div>
     </div>
 
-    <footer>
-      <div class="wrap foot-row">
+    <section>
+      <div class="section-head">
         <div>
-          <div class="logo"><span style="color: #2f6c51">Issubi</span></div>
-          <p
-            style="margin-top: 6px"
-            class="i18n"
-            data-en="An institution being built in Mbeya, Tanzania."
-          >
-            Taasisi inayojengwa jijini Mbeya, Tanzania.
-          </p>
+          <h2 data-en="Your learning path" data-sw="Njia yako ya kujifunza">Your learning path</h2>
+          <p data-en="A sequence, not a catalog. Each step unlocks once you finish the last." data-sw="Mfuatano, si orodha tu. Kila hatua inafunguka baada ya kumaliza iliyotangulia.">A sequence, not a catalog. Each step unlocks once you finish the last.</p>
         </div>
-        <p>© 2026 Issubi</p>
+        <span class="tag" data-en="WEB3 + AI FOUNDATIONS PATH" data-sw="NJIA YA MSINGI WA WEB3 + AI">WEB3 + AI FOUNDATIONS PATH</span>
       </div>
-    </footer>
+      <div class="path-track">
+        <div class="path-step">
+          <span class="path-num">01</span>
+          <h4 data-en="Blockchain Basics" data-sw="Misingi ya Blockchain">Blockchain Basics</h4>
+          <p data-en="What a ledger actually is, in plain words first." data-sw="Ledger ni nini hasa, kwa maneno rahisi kwanza.">What a ledger actually is, in plain words first.</p>
+          <div class="path-meta"><span class="pill">Free</span><span class="pill">2h</span></div>
+        </div>
+        <div class="path-step">
+          <span class="path-num">02</span>
+          <h4 data-en="Wallets & Keys" data-sw="Pochi na Funguo">Wallets & Keys</h4>
+          <p data-en="Hands-on: create, secure, and use a testnet wallet." data-sw="Vitendo: unda, linda, tumia pochi ya testnet.">Hands-on: create, secure, and use a testnet wallet.</p>
+          <div class="path-meta"><span class="pill">Free</span><span class="pill">1.5h</span></div>
+        </div>
+        <div class="path-step">
+          <span class="path-num">03</span>
+          <h4 data-en="Smart Contracts" data-sw="Mikataba Janja">Smart Contracts</h4>
+          <p data-en="Write and deploy your first contract, step by step." data-sw="Andika na peleka mkataba wako wa kwanza, hatua kwa hatua.">Write and deploy your first contract, step by step.</p>
+          <div class="path-meta"><span class="pill">Paid</span><span class="pill">4h</span></div>
+        </div>
+        <div class="path-step">
+          <span class="path-num">04</span>
+          <h4 data-en="AI Agents on Web3" data-sw="AI Agents kwenye Web3">AI Agents on Web3</h4>
+          <p data-en="Build an agent that reads on-chain data and acts." data-sw="Jenga agent inayosoma data ya on-chain na kuchukua hatua.">Build an agent that reads on-chain data and acts.</p>
+          <div class="path-meta"><span class="pill">Paid</span><span class="pill">5h</span></div>
+        </div>
+      </div>
+    </section>
 
-    <script>
-      (function () {
-        var STORAGE_KEY = "issubi-lang";
-        var toggleBtn = document.getElementById("langToggle");
+    <section>
+      <div class="diff-banner">
+        <div class="diff-item">
+          <div class="ico">📶</div>
+          <h4 data-en="Offline-first, always" data-sw="Nje ya mtandao, kila wakati">Offline-first, always</h4>
+          <p data-en="Every lesson downloads for low-bandwidth reading — built on what we learned shipping Issubi's apps in Mbeya." data-sw="Kila somo linapakuliwa kwa usomaji wa mtandao hafifu — kutokana na uzoefu wa kutengeneza programu za Issubi Mbeya.">Every lesson downloads for low-bandwidth reading — built on what we learned shipping Issubi's apps in Mbeya.</p>
+        </div>
+        <div class="diff-item">
+          <div class="ico">🗣️</div>
+          <h4 data-en="Bilingual by design" data-sw="Lugha mbili kwa ubunifu">Bilingual by design</h4>
+          <p data-en="Every lesson and course exists in English and Swahili — not translated as an afterthought." data-sw="Kila somo na kozi ipo kwa Kiingereza na Kiswahili — si tafsiri ya baadaye.">Every lesson and course exists in English and Swahili — not translated as an afterthought.</p>
+        </div>
+        <div class="diff-item">
+          <div class="ico">✍️</div>
+          <h4 data-en="Writing-first teaching" data-sw="Ufundishaji unaoanza kwa maandishi">Writing-first teaching</h4>
+          <p data-en="Concepts explained in careful prose before code — the way the best reference docs do it." data-sw="Dhana zinaelezwa kwa maandishi makini kabla ya msimbo — kama nyaraka bora zinavyofanya.">Concepts explained in careful prose before code — the way the best reference docs do it.</p>
+        </div>
+      </div>
+    </section>
 
-        function applyLang(lang) {
-          document.querySelectorAll(".i18n").forEach(function (el) {
-            if (!el.dataset.swCache) {
-              el.dataset.swCache = el.innerHTML;
-            }
-            el.innerHTML = lang === "en" ? el.dataset.en : el.dataset.swCache;
-          });
-          document.documentElement.lang = lang;
-          toggleBtn.textContent = lang === "en" ? "SW" : "EN";
-          try {
-            localStorage.setItem(STORAGE_KEY, lang);
-          } catch (e) {}
-        }
+    <section>
+      <div class="section-head">
+        <div>
+          <h2 data-en="Credentials that are actually yours" data-sw="Vyeti ambavyo ni vyako kikamilifu">Credentials that are actually yours</h2>
+          <p data-en="Finish a path and it's issued on-chain — verifiable anywhere, impossible to fake, not locked inside our database." data-sw="Maliza njia na cheti kinatolewa on-chain — kinathibitishwa popote, hakiwezi kughushiwa, wala hakifungiwi ndani ya database yetu tu.">Finish a path and it's issued on-chain — verifiable anywhere, impossible to fake, not locked inside our database.</p>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🎓</div>
+        <div>
+          <h4 data-en="Blockchain Basics — Completion Credential" data-sw="Misingi ya Blockchain — Cheti cha Kukamilisha">Blockchain Basics — Completion Credential</h4>
+          <div class="hash">0x8f3a...d21c</div>
+          <div class="meta" data-en="Issued on Polygon · Jul 2026 · Verified ✓" data-sw="Kimetolewa kwenye Polygon · Julai 2026 · Kimethibitishwa ✓">Issued on Polygon · Jul 2026 · Verified ✓</div>
+        </div>
+        <div class="cert-actions">
+          <button data-en="View on explorer" data-sw="Angalia kwenye explorer">View on explorer</button>
+          <button data-en="Share" data-sw="Shiriki">Share</button>
+        </div>
+      </div>
+    </section>
 
-        var saved;
-        try {
-          saved = localStorage.getItem(STORAGE_KEY);
-        } catch (e) {
-          saved = null;
-        }
-        var initialLang = saved === "en" ? "en" : "sw";
-        applyLang(initialLang);
+    <footer data-en="Issubi Academy — an Issubi project, built in Mbeya, Tanzania." data-sw="Issubi Academy — mradi wa Issubi, ulioundwa Mbeya, Tanzania.">Issubi Academy — an Issubi project, built in Mbeya, Tanzania.</footer>
+  </div>
 
-        toggleBtn.addEventListener("click", function () {
-          var current = document.documentElement.lang === "en" ? "en" : "sw";
-          applyLang(current === "en" ? "sw" : "en");
-        });
-      })();
-    </script>
-  </body>
+  <!-- ================= PRODUCTS VIEW (default landing) ================= -->
+  <div class="view active" id="view-products">
+    <section style="padding-bottom:0;">
+      <div class="eyebrow"><span class="dot"></span> <span data-en="ISSUBI PRODUCTS · BUILT IN MBEYA" data-sw="BIDHAA ZA ISSUBI · ZIMEJENGWA MBEYA">ISSUBI PRODUCTS · BUILT IN MBEYA</span></div>
+      <h1 class="hero-h" style="font-size:36px;max-width:700px;" data-en="Apps built for the reality of African businesses." data-sw="Apps zinazoendelezwa kwa uhalisia wa biashara za Kiafrika.">Apps built for the reality of African businesses.</h1>
+      <p class="sub" style="max-width:600px;" data-en="Issubi is where you find apps built from scratch — working without internet, for people who need them to work first, before they need to be fancy." data-sw="Issubi ni mahali pa kupata apps zinazoendelezwa kuanzia chini — zikifanya kazi bila mtandao, kwa watu wanaohitaji zifanye kazi kwanza, kabla ya kuwa za kifahari.">Issubi is where you find apps built from scratch — working without internet, for people who need them to work first, before they need to be fancy.</p>
+      <div class="cta-banner" style="margin-top:26px;">
+        <p data-en="Also building: Issubi Academy — a bilingual Web3 + AI learning platform, offline-first like our apps." data-sw="Pia tunajenga: Issubi Academy — jukwaa la kujifunza Web3 + AI kwa lugha mbili, nje ya mtandao kama apps zetu.">Also building: Issubi Academy — a bilingual Web3 + AI learning platform, offline-first like our apps.</p>
+        <a href="#" onclick="showView('home', document.getElementById('nav-academy')); return false;" data-en="Explore Academy →" data-sw="Angalia Academy →">Explore Academy →</a>
+      </div>
+    </section>
+
+    <section style="padding-top:36px;">
+      <div class="product-card">
+        <span class="app-tag" data-en="APP 01 · FIRST APP" data-sw="APP 01 · APP YA KWANZA">APP 01 · FIRST APP</span>
+        <h2 style="color:#fff;margin:0 0 10px;font-size:24px;">Pharmacy Manager</h2>
+        <p style="color:var(--mist-dim);font-size:15px;line-height:1.6;max-width:600px;margin:0;" data-en="A system for managing pharmacies — sales, stock, and records — that works without internet." data-sw="Mfumo wa kusimamia maduka ya dawa (Pharmacies) — mauzo, stock, na rekodi — unaofanya kazi bila mtandao.">A system for managing pharmacies — sales, stock, and records — that works without internet.</p>
+        <div class="product-badges">
+          <span class="product-badge offline" data-en="⬇ Offline-first" data-sw="⬇ Nje ya mtandao kwanza">⬇ Offline-first</span>
+          <span class="product-badge">Android · Windows · macOS</span>
+          <span class="product-badge">v1.0</span>
+        </div>
+
+        <div class="download-grid">
+          <div class="download-card">
+            <div class="dc-top"><h4>Android</h4><span class="coming-badge" data-en="Coming August" data-sw="Inakuja Agosti">Coming August</span></div>
+            <div class="filemeta">.apk — ~25MB<br>Android 8.0+</div>
+            <button data-en="Notify me" data-sw="Nijulishe">Notify me</button>
+          </div>
+          <div class="download-card">
+            <div class="dc-top"><h4>Windows</h4><span class="coming-badge" data-en="Coming August" data-sw="Inakuja Agosti">Coming August</span></div>
+            <div class="filemeta">.zip — ~60MB<br>Windows 10/11</div>
+            <button data-en="Notify me" data-sw="Nijulishe">Notify me</button>
+          </div>
+          <div class="download-card">
+            <div class="dc-top"><h4>macOS</h4><span class="coming-badge" data-en="Coming August" data-sw="Inakuja Agosti">Coming August</span></div>
+            <div class="filemeta">.dmg — ~65MB<br>macOS 12+</div>
+            <button data-en="Notify me" data-sw="Nijulishe">Notify me</button>
+          </div>
+        </div>
+
+        <div class="cta-banner">
+          <p data-en="Pharmacy Manager v1.0 launches officially in August 2026. Join the WhatsApp list so we can send you the download link on launch day." data-sw="Pharmacy Manager v1.0 inazinduliwa rasmi Agosti 2026. Jiunge na orodha ya WhatsApp ili tukutumie link ya kupakua siku ya uzinduzi.">Pharmacy Manager v1.0 launches officially in August 2026. Join the WhatsApp list so we can send you the download link on launch day.</p>
+          <a href="https://wa.me/255755977960" target="_blank" data-en="Message us on WhatsApp" data-sw="Tutumie WhatsApp">Message us on WhatsApp</a>
+        </div>
+
+        <h3 style="color:#fff;font-size:18px;margin:0 0 6px;" data-en="Instructions" data-sw="Maelekezo">Instructions</h3>
+        <p style="color:var(--mist-dim);font-size:13.5px;margin:0 0 20px;" data-en="How to install the app after downloading" data-sw="Jinsi ya kufunga app baada ya kupakua">How to install the app after downloading</p>
+        <div class="install-tabs">
+          <button class="active" onclick="showInstall('android', this)">Android</button>
+          <button onclick="showInstall('windows', this)">Windows</button>
+          <button onclick="showInstall('macos', this)">macOS</button>
+        </div>
+
+        <div class="install-panel active" id="install-android">
+          <div class="install-step"><div class="install-num">1</div><div><h5 data-en="Tap the APK file you downloaded" data-sw="Bofya faili la APK ulilolipakua">Tap the APK file you downloaded</h5><p data-en="It appears in your phone's 'Downloads'." data-sw="Linaonekana kwenye 'Downloads' ya simu yako.">It appears in your phone's "Downloads".</p></div></div>
+          <div class="install-step"><div class="install-num">2</div><div><h5 data-en="'Unknown source' warning" data-sw="Onyo la 'Unknown source'">"Unknown source" warning</h5><p data-en="Tap 'Settings' in that message, turn 'Allow from this source' On." data-sw="Bofya 'Settings' kwenye ujumbe huo, geuza 'Allow from this source' kuwa On.">Tap "Settings" in that message, turn "Allow from this source" On.</p></div></div>
+          <div class="install-step"><div class="install-num">3</div><div><h5 data-en="Tap 'Install' again" data-sw="Bofya 'Install' tena">Tap "Install" again</h5><p data-en="The app will install within a few seconds." data-sw="App itafungwa ndani ya sekunde chache.">The app will install within a few seconds.</p></div></div>
+        </div>
+        <div class="install-panel" id="install-windows">
+          <div class="install-step"><div class="install-num">1</div><div><h5 data-en="Open the .zip file you downloaded" data-sw="Fungua faili la .zip ulilolipakua">Open the .zip file you downloaded</h5><p data-en="Click 'Extract All' to get the app folder." data-sw="Bofya 'Extract All' kupata folder ya app.">Click "Extract All" to get the app folder.</p></div></div>
+          <div class="install-step"><div class="install-num">2</div><div><h5 data-en="'Windows protected your PC' warning" data-sw="Onyo la 'Windows protected your PC'">"Windows protected your PC" warning</h5><p data-en="Click 'More info', then 'Run anyway' — normal for apps without a Microsoft Store license." data-sw="Bofya 'More info', kisha 'Run anyway' — hii ni kawaida kwa apps bila Microsoft Store license.">Click "More info", then "Run anyway" — normal for apps without a Microsoft Store license.</p></div></div>
+          <div class="install-step"><div class="install-num">3</div><div><h5 data-en="Open the .exe file inside the folder" data-sw="Fungua faili la .exe ndani ya folder">Open the .exe file inside the folder</h5><p data-en="The app opens directly, no extra 'install' needed." data-sw="App itafunguka moja kwa moja, hauhitaji 'install' ya ziada.">The app opens directly, no extra "install" needed.</p></div></div>
+        </div>
+        <div class="install-panel" id="install-macos">
+          <div class="install-step"><div class="install-num">1</div><div><h5 data-en="Open the .dmg file you downloaded" data-sw="Fungua faili la .dmg ulilolipakua">Open the .dmg file you downloaded</h5><p data-en="A new window opens with the app icon." data-sw="Dirisha jipya litafunguka likiwa na icon ya app.">A new window opens with the app icon.</p></div></div>
+          <div class="install-step"><div class="install-num">2</div><div><h5 data-en="Drag the icon to 'Applications'" data-sw="Vuta icon kwenda 'Applications'">Drag the icon to "Applications"</h5><p data-en="Then close that window." data-sw="Kisha funga dirisha hilo.">Then close that window.</p></div></div>
+          <div class="install-step"><div class="install-num">3</div><div><h5 data-en="'Apple cannot verify' warning" data-sw="Onyo la 'Apple cannot verify'">"Apple cannot verify" warning</h5><p data-en="Open 'System Settings → Privacy &amp; Security', click 'Open Anyway' next to the app's name." data-sw="Fungua 'System Settings → Privacy &amp; Security', bofya 'Open Anyway' karibu na jina la app.">Open "System Settings → Privacy &amp; Security", click "Open Anyway" next to the app's name.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <h2 data-en="Coming next" data-sw="Zinakuja">Coming next</h2>
+        </div>
+      </div>
+      <div class="next-grid">
+        <div class="next-card">
+          <h4>App 02</h4>
+          <span class="next-status" data-en="Building" data-sw="Inajengwa">Building</span>
+        </div>
+        <div class="next-card">
+          <h4>App 03</h4>
+          <span class="next-status" data-en="Planned" data-sw="Inapangwa">Planned</span>
+        </div>
+        <div class="next-card">
+          <h4>Issubi Research Center</h4>
+          <span class="next-status" data-en="First reports coming" data-sw="Ripoti za kwanza zinakuja">First reports coming</span>
+        </div>
+      </div>
+    </section>
+
+    <footer data-en="Issubi — an institution being built in Mbeya, Tanzania." data-sw="Issubi — Taasisi inayojengwa jijini Mbeya, Tanzania.">Issubi — an institution being built in Mbeya, Tanzania.</footer>
+  </div>
+
+  <!-- ================= LESSON VIEW ================= -->
+  <div class="view" id="view-lesson">
+    <div class="lesson-wrap">
+      <nav class="sidebar" aria-label="Lesson topics">
+        <h5 data-en="Topics" data-sw="Mada">Topics</h5>
+        <details class="tree-group" open>
+          <summary data-en="Web3 Fundamentals" data-sw="Misingi ya Web3">Web3 Fundamentals ⌄</summary>
+          <a href="#" class="tree-item current" aria-current="page" data-en="What is a blockchain?" data-sw="Blockchain ni nini?">What is a blockchain?</a>
+          <a href="#" class="tree-item" data-en="Consensus, simply" data-sw="Consensus, kwa urahisi">Consensus, simply</a>
+          <a href="#" class="tree-item" data-en="Wallets & keys" data-sw="Pochi na funguo">Wallets & keys</a>
+        </details>
+        <details class="tree-group">
+          <summary data-en="Smart Contracts" data-sw="Mikataba Janja">Smart Contracts ⌄</summary>
+          <a href="#" class="tree-item" data-en="Your first contract" data-sw="Mkataba wako wa kwanza">Your first contract</a>
+          <a href="#" class="tree-item" data-en="Testing & deploying" data-sw="Kupima na kupeleka">Testing & deploying</a>
+        </details>
+        <details class="tree-group">
+          <summary data-en="AI Agents" data-sw="AI Agents">AI Agents ⌄</summary>
+          <a href="#" class="tree-item" data-en="Reading on-chain data" data-sw="Kusoma data ya on-chain">Reading on-chain data</a>
+          <a href="#" class="tree-item" data-en="Acting autonomously" data-sw="Kutenda kiotomatiki">Acting autonomously</a>
+        </details>
+      </nav>
+
+      <article class="reading serif">
+        <div class="badges">
+          <span class="badge" data-en="Beginner" data-sw="Mwanzo">Beginner</span>
+          <span class="badge offline" data-en="⬇ Offline-ready" data-sw="⬇ Tayari nje ya mtandao">⬇ Offline-ready</span>
+          <span class="badge" data-en="EN / SW" data-sw="EN / SW">EN / SW</span>
+        </div>
+        <h1 data-en="What is a blockchain?" data-sw="Blockchain ni nini?">What is a blockchain?</h1>
+        <p id="para1" data-en="A blockchain is a record book that many computers keep copies of at the same time. Instead of one bank deciding what your balance is, thousands of computers agree on it together, and once a page is written, it's extremely hard to quietly change." data-sw="Blockchain ni kitabu cha kumbukumbu ambacho kompyuta nyingi zinashikilia nakala zake wakati mmoja. Badala ya benki moja kuamua salio lako, kompyuta maelfu zinakubaliana pamoja, na baada ya ukurasa kuandikwa, ni vigumu sana kuubadilisha kimya kimya." data-alt-en="Think of it like a group chat where every message is permanent and everyone in the chat has a full copy of the whole conversation. No single person can delete or edit an old message — the group as a whole would have to disagree with the change, and most won't." data-alt-sw="Fikiria kama group chat ambapo kila ujumbe ni wa kudumu na kila mtu kwenye group ana nakala kamili ya mazungumzo yote. Hakuna mtu mmoja anayeweza kufuta au kuhariri ujumbe wa zamani — kundi zima lingehitajika kutokubaliana na mabadiliko hayo, na wengi hawatakubali.">A blockchain is a record book that many computers keep copies of at the same time. Instead of one bank deciding what your balance is, thousands of computers agree on it together, and once a page is written, it's extremely hard to quietly change.</p>
+        <button class="explain-btn" onclick="explainDifferently()">🔄 <span data-en="Explain differently" data-sw="Eleza kwa njia nyingine">Explain differently</span></button>
+        <p data-en="That's the whole idea. Everything else — tokens, contracts, wallets — is built on top of this one property: a shared record nobody controls alone." data-sw="Hiyo ndiyo dhana nzima. Kila kitu kingine — tokeni, mikataba, pochi — kimejengwa juu ya sifa hii moja: kumbukumbu ya pamoja isiyodhibitiwa na mtu mmoja.">That's the whole idea. Everything else — tokens, contracts, wallets — is built on top of this one property: a shared record nobody controls alone.</p>
+        <h3 data-en="Why it matters for what you'll build" data-sw="Kwa nini ni muhimu kwa utakachojenga">Why it matters for what you'll build</h3>
+        <p data-en="Every contract you write later in this path assumes this foundation. Once you can explain a blockchain in one sentence to a friend, the rest of this path moves fast." data-sw="Kila mkataba utakaoandika baadaye katika njia hii unategemea msingi huu. Ukishaweza kueleza blockchain kwa sentensi moja kwa rafiki, sehemu iliyobaki ya njia hii itaenda haraka.">Every contract you write later in this path assumes this foundation. Once you can explain a blockchain in one sentence to a friend, the rest of this path moves fast.</p>
+        <div class="callout">
+          <b data-en="Try it —" data-sw="Jaribu —">Try it —</b> <span data-en="explain a blockchain to someone who's never heard of it, using only the word 'shared notebook.' If it clicks for them, it's clicked for you." data-sw="mwelezee mtu ambaye hajawahi kusikia kuhusu blockchain, ukitumia neno 'daftari la pamoja' tu. Ikieleweka kwao, imeeleweka kwako pia.">explain a blockchain to someone who's never heard of it, using only the word 'shared notebook.' If it clicks for them, it's clicked for you.</span>
+        </div>
+        <h3 data-en="A first look at code" data-sw="Mtazamo wa kwanza wa msimbo">A first look at code</h3>
+        <p data-en="You won't write this yet — just notice the shape of it." data-sw="Hutaandika hii bado — angalia tu umbo lake.">You won't write this yet — just notice the shape of it.</p>
+        <div class="code mono"><span class="c1">function</span> <span class="c2">recordEntry</span>(entry) {<br>&nbsp;&nbsp;ledger.push(entry);<br>&nbsp;&nbsp;<span class="c1">return</span> ledger.hash();<br>}</div>
+        <div class="code-review">
+          <b data-en="🧠 AI code review" data-sw="🧠 Uhakiki wa AI">🧠 AI code review</b>
+          <span data-en="Correct shape. One thing to notice: calling ledger.hash() on every entry re-hashes the whole chain — real implementations usually hash just the new block against the previous hash instead." data-sw="Umbo sahihi. Kitu cha kuzingatia: kuita ledger.hash() kwa kila kiingilio kunahesabu upya hash ya mnyororo mzima — utekelezaji halisi kwa kawaida huhesabu hash ya block mpya dhidi ya hash iliyotangulia tu.">Correct shape. One thing to notice: calling ledger.hash() on every entry re-hashes the whole chain — real implementations usually hash just the new block against the previous hash instead.</span>
+        </div>
+
+        <div class="quiz-card">
+          <span class="qtag" data-en="Quick check · adaptive" data-sw="Ukaguzi wa haraka · unaobadilika">Quick check · adaptive</span>
+          <h4 data-en="What makes a blockchain hard to quietly change?" data-sw="Ni nini kinachofanya blockchain iwe vigumu kubadilishwa kimya kimya?">What makes a blockchain hard to quietly change?</h4>
+          <button class="qopt" onclick="answerQuiz(this,false)" data-en="It's stored on one very secure government server" data-sw="Imehifadhiwa kwenye server moja salama ya serikali">It's stored on one very secure government server</button>
+          <button class="qopt" onclick="answerQuiz(this,true)" data-en="Thousands of independent copies would all have to be changed at once" data-sw="Nakala elfu kwa elfu huru zingehitajika kubadilishwa zote kwa wakati mmoja">Thousands of independent copies would all have to be changed at once</button>
+          <button class="qopt" onclick="answerQuiz(this,false)" data-en="Only the platform owner is allowed to edit it" data-sw="Mmiliki wa jukwaa tu ndiye anayeruhusiwa kuhariri">Only the platform owner is allowed to edit it</button>
+          <div class="qfeedback" id="qfeedback" data-en="Nice — since you got that quickly, the next question in this lesson will be a notch harder." data-sw="Vizuri — kwa kuwa umejibu haraka, swali lijalo katika somo hili litakuwa gumu zaidi kidogo.">Nice — since you got that quickly, the next question in this lesson will be a notch harder.</div>
+        </div>
+      </article>
+
+      <aside class="rightrail">
+        <h5 data-en="On this page" data-sw="Kwenye ukurasa huu">On this page</h5>
+        <a href="#why-it-matters" data-en="Why it matters" data-sw="Kwa nini ni muhimu">Why it matters</a>
+        <a href="#try-it" data-en="Try it" data-sw="Jaribu">Try it</a>
+        <a href="#first-look-code" data-en="A first look at code" data-sw="Mtazamo wa kwanza wa msimbo">A first look at code</a>
+        <div class="nextlesson">
+          <span data-en="NEXT LESSON" data-sw="SOMO LIJALO">NEXT LESSON</span>
+          <strong data-en="Consensus, simply →" data-sw="Consensus, kwa urahisi →">Consensus, simply →</strong>
+        </div>
+      </aside>
+    </div>
+
+    <button class="ai-fab" onclick="toggleAI()">🤖<span class="pulse"></span></button>
+    <div class="ai-panel" id="aiPanel">
+      <div class="ai-head">
+        <div>
+          <b data-en="Issubi AI Tutor" data-sw="Mwalimu wa AI wa Issubi">Issubi AI Tutor</b>
+          <span data-en="● context-aware · reads this lesson" data-sw="● anafahamu muktadha · anasoma somo hili">● context-aware · reads this lesson</span>
+        </div>
+        <button onclick="toggleAI()">✕</button>
+      </div>
+      <div class="ai-body">
+        <div class="ai-msg user" data-en="Can you explain consensus again, simpler?" data-sw="Waeza nieleza consensus tena, kwa urahisi zaidi?">Can you explain consensus again, simpler?</div>
+        <div class="ai-msg bot" data-en="Sure — it's like agreeing where to eat with friends. Everyone votes, majority wins, and once it's decided, nobody quietly changes the plan afterward." data-sw="Sawa — ni kama kukubaliana wapi pa kula na marafiki. Kila mmoja anapiga kura, wengi wanashinda, na baada ya kuamuliwa, hakuna anayebadilisha mpango kimya kimya.">Sure — it's like agreeing where to eat with friends. Everyone votes, majority wins, and once it's decided, nobody quietly changes the plan afterward.</div>
+      </div>
+      <div class="ai-input">
+        <input type="text" data-en="Ask about this lesson..." data-sw="Uliza kuhusu somo hili..." placeholder="Ask about this lesson...">
+        <button data-en="Send" data-sw="Tuma">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= COURSES VIEW ================= -->
+  <div class="view" id="view-courses">
+    <section>
+      <div class="section-head">
+        <div>
+          <h2 data-en="Courses" data-sw="Kozi">Courses</h2>
+          <p data-en="Free written docs teach the concepts. These add structure, projects, and review." data-sw="Masomo ya bure yanafundisha dhana. Hizi zinaongeza muundo, miradi, na mapitio.">Free written docs teach the concepts. These add structure, projects, and review.</p>
+        </div>
+      </div>
+      <div class="filterbar">
+        <button class="active" data-en="All" data-sw="Zote">All</button>
+        <button data-en="Free" data-sw="Bure">Free</button>
+        <button data-en="Paid" data-sw="Malipo">Paid</button>
+        <button data-en="Web3" data-sw="Web3">Web3</button>
+        <button data-en="AI" data-sw="AI">AI</button>
+      </div>
+      <div class="course-grid">
+
+        <div class="course-card">
+          <div class="course-top"><div class="course-icon"></div><span class="price free" data-en="Free" data-sw="Bure">Free</span></div>
+          <h4 data-en="Blockchain Basics" data-sw="Misingi ya Blockchain">Blockchain Basics</h4>
+          <p data-en="Start here. Plain-language foundations before any code." data-sw="Anza hapa. Misingi kwa lugha rahisi kabla ya msimbo wowote.">Start here. Plain-language foundations before any code.</p>
+          <div class="course-meta"><span class="pill">2h</span><span class="pill">Beginner</span></div>
+          <button data-en="Start course" data-sw="Anza kozi">Start course</button>
+        </div>
+
+        <div class="course-card">
+          <div class="course-top"><div class="course-icon"></div><span class="price" data-en="$18" data-sw="Sh 42,000">$18</span></div>
+          <h4 data-en="Smart Contracts in Practice" data-sw="Mikataba Janja Vitendo">Smart Contracts in Practice</h4>
+          <p data-en="Write, test, and deploy contracts with real projects." data-sw="Andika, pima, na peleka mikataba kwa miradi halisi.">Write, test, and deploy contracts with real projects.</p>
+          <div class="course-meta"><span class="pill">4h</span><span class="pill">Intermediate</span></div>
+          <button data-en="Enroll" data-sw="Jiandikishe">Enroll</button>
+        </div>
+
+        <div class="course-card">
+          <div class="course-top"><div class="course-icon"></div><span class="price" data-en="$24 / 38 USDC" data-sw="Sh 56,000 / 38 USDC">$24 / 38 USDC</span></div>
+          <h4 data-en="AI Agents on Web3" data-sw="AI Agents kwenye Web3">AI Agents on Web3</h4>
+          <p data-en="Build an agent that reads on-chain data and takes action." data-sw="Jenga agent inayosoma data ya on-chain na kuchukua hatua.">Build an agent that reads on-chain data and takes action.</p>
+          <div class="course-meta"><span class="pill">5h</span><span class="pill">Advanced</span></div>
+          <div class="paytoggle">
+            <button class="active" onclick="setPay(this,'card')" data-en="Card" data-sw="Kadi">Card</button>
+            <button onclick="setPay(this,'usdc')" data-en="USDC" data-sw="USDC">USDC</button>
+          </div>
+          <button data-en="Enroll" data-sw="Jiandikishe">Enroll</button>
+          <div class="lock-overlay" id="lockOverlay">
+            <div class="lockicon">🔒</div>
+            <p data-en="Token-gated — unlocks with:" data-sw="Imefungwa kwa tokeni — inafunguka kwa:">Token-gated — unlocks with:</p>
+            <b data-en="Smart Contracts Certificate" data-sw="Cheti cha Mikataba Janja">Smart Contracts Certificate</b>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-top"><div class="course-icon"></div><span class="price free" data-en="Free" data-sw="Bure">Free</span></div>
+          <h4 data-en="Wallets & Keys" data-sw="Pochi na Funguo">Wallets & Keys</h4>
+          <p data-en="Create and secure your first wallet, hands-on." data-sw="Unda na linda pochi yako ya kwanza, kivitendo.">Create and secure your first wallet, hands-on.</p>
+          <div class="course-meta"><span class="pill">1.5h</span><span class="pill">Beginner</span></div>
+          <button data-en="Start course" data-sw="Anza kozi">Start course</button>
+        </div>
+
+        <div class="course-card">
+          <div class="course-top"><div class="course-icon"></div><span class="price" data-en="$30" data-sw="Sh 70,000">$30</span></div>
+          <h4 data-en="AI for Builders" data-sw="AI kwa Wajenzi">AI for Builders</h4>
+          <p data-en="Practical AI tooling for people shipping real products." data-sw="Zana za AI za vitendo kwa watu wanaotengeneza bidhaa halisi.">Practical AI tooling for people shipping real products.</p>
+          <div class="course-meta"><span class="pill">6h</span><span class="pill">Intermediate</span></div>
+          <button data-en="Enroll" data-sw="Jiandikishe">Enroll</button>
+        </div>
+
+        <div class="course-card">
+          <div class="course-top"><div class="course-icon"></div><span class="price" data-en="$40" data-sw="Sh 93,000">$40</span></div>
+          <h4 data-en="Web3 + AI Capstone" data-sw="Mradi wa Mwisho: Web3 + AI">Web3 + AI Capstone</h4>
+          <p data-en="Ship one real project combining everything in this path." data-sw="Kamilisha mradi mmoja halisi unaochanganya kila kitu.">Ship one real project combining everything in this path.</p>
+          <div class="course-meta"><span class="pill">10h</span><span class="pill">Advanced</span></div>
+          <button data-en="Enroll" data-sw="Jiandikishe">Enroll</button>
+        </div>
+
+      </div>
+    </section>
+    <footer data-en="Issubi Academy — an Issubi project, built in Mbeya, Tanzania." data-sw="Issubi Academy — mradi wa Issubi, ulioundwa Mbeya, Tanzania.">Issubi Academy — an Issubi project, built in Mbeya, Tanzania.</footer>
+  </div>
+
+<script>
+let currentLang = 'en';
+
+function showView(name, btn){
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.getElementById('view-' + name).classList.add('active');
+  document.querySelectorAll('.navlinks button').forEach(b => b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  const routes = {products:'', home:'academy', lesson:'academy/masomo/blockchain-basics', courses:'academy/kozi'};
+  const path = routes[name];
+  document.getElementById('urlbar').innerHTML = 'issubi.com/<b>' + currentLang + '</b>/' + path;
+}
+
+function setLang(lang){
+  currentLang = lang;
+  document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+  document.getElementById('lang-sw').classList.toggle('active', lang === 'sw');
+  document.querySelectorAll('[data-en]').forEach(el => {
+    el.innerHTML = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-sw');
+  });
+  const urlbar = document.getElementById('urlbar');
+  urlbar.innerHTML = urlbar.innerHTML.replace(/>(en|sw)</, '>' + lang + '<');
+}
+
+let walletConnected = false;
+function toggleWallet(){
+  walletConnected = !walletConnected;
+  const btn = document.getElementById('walletBtn');
+  const label = document.getElementById('walletLabel');
+  btn.classList.toggle('connected', walletConnected);
+  const overlay = document.getElementById('lockOverlay');
+  if(walletConnected){
+    label.textContent = '0x4A2f...9F1c';
+    if(overlay) overlay.classList.add('hidden');
+  }else{
+    label.textContent = currentLang === 'en' ? 'Connect Wallet' : 'Unganisha Pochi';
+    if(overlay) overlay.classList.remove('hidden');
+  }
+}
+
+function toggleAI(){
+  document.getElementById('aiPanel').classList.toggle('open');
+}
+
+let explainToggled = false;
+function explainDifferently(){
+  explainToggled = !explainToggled;
+  const p = document.getElementById('para1');
+  if(explainToggled){
+    p.textContent = currentLang === 'en' ? p.getAttribute('data-alt-en') : p.getAttribute('data-alt-sw');
+  }else{
+    p.textContent = currentLang === 'en' ? p.getAttribute('data-en') : p.getAttribute('data-sw');
+  }
+}
+
+function answerQuiz(btn, isCorrect){
+  document.querySelectorAll('.qopt').forEach(b => b.disabled = true);
+  btn.classList.add(isCorrect ? 'correct' : 'wrong');
+  document.getElementById('qfeedback').classList.add('show');
+}
+
+function setPay(btn, method){
+  btn.parentElement.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+function showInstall(os, btn){
+  document.querySelectorAll('.install-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('install-' + os).classList.add('active');
+  btn.parentElement.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>
+</body>
 </html>
